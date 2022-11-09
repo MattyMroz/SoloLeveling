@@ -110,6 +110,7 @@ body {
     background-color: var(--body-color);
     text-transform: capitalize;
     overflow-x: hidden;
+    -webkit-overflow-x: hidden;
 }
 
 /* =============== DARK MODE =============== */
