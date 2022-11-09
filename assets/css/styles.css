@@ -847,7 +847,7 @@ input:checked+.slider:before {
 
 
 
-@media screen and (max-width: 992px) and (orientation: portrait) {
+@media screen and (max-width: 992px) {
     html {
         /* 8.8px */
         font-size: 55%;
@@ -867,7 +867,7 @@ input:checked+.slider:before {
     }
 }
 
-@media screen and (max-width: 768px) and (orientation: portrait) {
+@media screen and (max-width: 768px) {
     :root {
         /* --title-font-size: 11.5rem; */
         --subtitle-font-size: 2.3rem;
@@ -960,11 +960,13 @@ input:checked+.slider:before {
     } */
 
     .home__img img {
+        width: 60vh;
+        min-width: 60vh;
         left: 40%;
     }
 }
 
-@media screen and (max-width: 576px) and (orientation: portrait) {
+@media screen and (max-width: 576px) {
     :root {
         /* --title-font-size: 8rem; */
         --subtitle-font-size: 1.75rem;
@@ -995,7 +997,7 @@ input:checked+.slider:before {
 }
 
 
-@media screen and (max-width: 460px) and (orientation: portrait) {
+@media screen and (max-width: 460px) {
     :root {
         --title-font-size: 7rem;
     }
@@ -1016,7 +1018,7 @@ input:checked+.slider:before {
     }
 }
 
-@media screen and (max-width: 390px) and (orientation: portrait)  {
+@media screen and (max-width: 390px) {
     :root {
         --title-font-size: 7rem;
     }
@@ -1038,7 +1040,7 @@ input:checked+.slider:before {
 }
 
 
-@media screen and (max-width: 320px) and (orientation: portrait) {
+@media screen and (max-width: 320px) {
     :root {
         --title-font-size: 6rem;
     }
