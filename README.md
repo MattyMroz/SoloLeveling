@@ -1,2 +1,2 @@
 # Solo Leveling
-[Solo Leveling](https://mattymroz.github.io/SoloLevelig/)
+[Solo Leveling](https://mattymroz.github.io/SoloLeveling/)
