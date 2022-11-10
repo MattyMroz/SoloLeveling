@@ -100,8 +100,7 @@ html {
     font-size: 62.5%;
     /* Zapobieganie skalowaniu czcionek w orientacji poziomej przy jednoczesnym umożliwieniu powiększania przez użytkownika */
     -webkit-text-size-adjust: 100%;
-    overflow-x: hidden;
-    overflow-y: scroll !important;
+    overflow-x: hidden !important;
 }
 
 /* =============== BASE BODY =============== */
@@ -111,10 +110,7 @@ body {
     color: var(--text-color);
     background-color: var(--body-color);
     text-transform: capitalize;
-    overflow-x: hidden;
-    /* oferfolow hidden dla webkit */
-    -webkit-overflow-scrolling: touch;
-
+    overflow-x: hidden !important;
 }
 
 /* =============== DARK MODE =============== */
@@ -978,11 +974,9 @@ body.dark__mode .home__title-svg {
     }
 
 
-    .home__img img {
-        width: 70vh;
-        min-width: 70vh;
+    /* .home__img img {
         left: 30%;
-    }
+    } */
 }
 
 @media screen and (max-width:460px) {
