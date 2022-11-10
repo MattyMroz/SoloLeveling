@@ -105,9 +105,8 @@ html {
 
 /* =============== BASE BODY =============== */
 body {
-    width: 100%;
-    height: calc(var(--vh, 1vh) * 100);
-    /* powyższa calc ma */
+    position: fixed;
+    height: 100%;
     font-family: var(--normal-font);
     font-size: var(--normal-font-size);
     color: var(--text-color);
