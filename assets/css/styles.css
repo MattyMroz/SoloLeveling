@@ -105,8 +105,8 @@ html {
 
 /* =============== BASE BODY =============== */
 body {
-    position: fixed;
-    height: 100%;
+    height: 100vh;
+    min-height: 100vh;
     font-family: var(--normal-font);
     font-size: var(--normal-font-size);
     color: var(--text-color);

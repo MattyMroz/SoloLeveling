@@ -392,13 +392,13 @@ $(document).ready(function () {
         }
         animate();
     });
-    // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
-    const appHeight = () => {
-        const doc = document.documentElement
-        doc.style.setProperty('--app-height', `${window.innerHeight}px`)
-    }
-    window.addEventListener('resize', appHeight)
-    appHeight()
+    // // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
+    // const appHeight = () => {
+    //     const doc = document.documentElement
+    //     doc.style.setProperty('--app-height', `${window.innerHeight}px`)
+    // }
+    // window.addEventListener('resize', appHeight)
+    // appHeight()
 
 });
 
