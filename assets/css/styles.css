@@ -507,14 +507,12 @@ input:checked+.slider:before {
 
 /* =============== HOME =============== */
 .home {
-    /* height: 100vh; */
+    height: 100vh;
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    /* overflow-x: hidden; */
-    /* position: relative; */
-    /* padding: 0 1rem; */
+    position: relative;
 }
 
 .home__container {
