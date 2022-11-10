@@ -100,7 +100,11 @@ html {
     font-size: 62.5%;
     /* Zapobieganie skalowaniu czcionek w orientacji poziomej przy jednoczesnym umożliwieniu powiększania przez użytkownika */
     -webkit-text-size-adjust: 100%;
+    /* overflow-x: hidden; */
+
+    overflow-y: scroll;
     overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
 }
 
 /* =============== BASE BODY =============== */
@@ -553,6 +557,7 @@ body.dark__mode .home__title-svg {
 .home__img {}
 
 .home__img img {
+    overflow: hidden;
     position: absolute;
     bottom: 0;
     left: 55%;
