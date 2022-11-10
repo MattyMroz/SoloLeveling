@@ -227,7 +227,7 @@ span {
 
 img,
 video {
-    max-width: 100%;
+    /* max-width: 100%; */
     /* height: auto; */
 }
 
@@ -554,7 +554,9 @@ body.dark__mode .home__title-svg {
     fill: var(--text-color);
 }
 
-.home__img {}
+.home__img {
+    overflow: hidden;
+}
 
 .home__img img {
     overflow: hidden;
