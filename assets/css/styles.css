@@ -1050,7 +1050,7 @@ body.dark__mode .home__title-svg {
 
 @media (height <=576px) and (orientation: landscape) {
     .home__title-svg {
-        padding-left: 10%;
+        margin-left: 5%;
         width: 60%;
         min-width: 60%;
     }
@@ -1058,7 +1058,7 @@ body.dark__mode .home__title-svg {
 
 @media (height <=480px) and (orientation: landscape) {
     .home__title-svg {
-        padding-left: 10%;
+        margin-left: 10%;
         width: 50%;
         min-width: 50%;
     }
