@@ -96,6 +96,7 @@
 }
 
 html {
+    height: -webkit-fill-available;
     /* 10px */
     font-size: 62.5%;
     /* Zapobieganie skalowaniu czcionek w orientacji poziomej przy jednoczesnym umożliwieniu powiększania przez użytkownika */
@@ -105,8 +106,8 @@ html {
 
 /* =============== BASE BODY =============== */
 body {
-    width: 100%;
-    height: calc(100vh - calc(100vh - 100%));
+    min-height: 100vh;
+    min-height: -webkit-fill-available;
     font-family: var(--normal-font);
     font-size: var(--normal-font-size);
     color: var(--text-color);
