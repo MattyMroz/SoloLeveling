@@ -105,12 +105,13 @@ html {
 
 /* =============== BASE BODY =============== */
 body {
+    position: relative;
     font-family: var(--normal-font);
     font-size: var(--normal-font-size);
     color: var(--text-color);
     background-color: var(--body-color);
     text-transform: capitalize;
-    overflow-x: hidden !important;
+    overflow-x: hidden;
 }
 
 /* =============== DARK MODE =============== */
@@ -512,7 +513,7 @@ input:checked+.slider:before {
     justify-content: center;
     align-items: center;
     /* overflow-x: hidden; */
-    /* position: relative; */
+    position: relative;
     /* padding: 0 1rem; */
 }
 
