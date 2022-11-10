@@ -101,6 +101,7 @@ html {
     /* Zapobieganie skalowaniu czcionek w orientacji poziomej przy jednoczesnym umożliwieniu powiększania przez użytkownika */
     -webkit-text-size-adjust: 100%;
     overflow-x: hidden;
+    overflow-y: scroll !important;
 }
 
 /* =============== BASE BODY =============== */
@@ -113,7 +114,7 @@ body {
     overflow-x: hidden;
     /* oferfolow hidden dla webkit */
     -webkit-overflow-scrolling: touch;
-    
+
 }
 
 /* =============== DARK MODE =============== */
