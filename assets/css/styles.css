@@ -111,6 +111,9 @@ body {
     background-color: var(--body-color);
     text-transform: capitalize;
     overflow-x: hidden;
+    /* oferfolow hidden dla webkit */
+    -webkit-overflow-scrolling: touch;
+    
 }
 
 /* =============== DARK MODE =============== */
@@ -511,6 +514,7 @@ input:checked+.slider:before {
     display: flex;
     justify-content: center;
     align-items: center;
+    /* overflow-x: hidden; */
     /* position: relative; */
     /* padding: 0 1rem; */
 }
