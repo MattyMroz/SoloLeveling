@@ -100,18 +100,22 @@ html {
     font-size: 62.5%;
     /* Zapobieganie skalowaniu czcionek w orientacji poziomej przy jednoczesnym umożliwieniu powiększania przez użytkownika */
     -webkit-text-size-adjust: 100%;
-    overflow-x: hidden !important;
+    overflow-x: hidden;
 }
 
 /* =============== BASE BODY =============== */
 body {
-    position: relative;
+    /* position: relative; */
     font-family: var(--normal-font);
     font-size: var(--normal-font-size);
     color: var(--text-color);
     background-color: var(--body-color);
     text-transform: capitalize;
+    /* overflow-x: hidden; */
+
+    overflow-y: scroll;
     overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
 }
 
 /* =============== DARK MODE =============== */
@@ -512,7 +516,7 @@ input:checked+.slider:before {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
+    /* position: relative; */
 }
 
 .home__container {
