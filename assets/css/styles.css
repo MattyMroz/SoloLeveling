@@ -536,8 +536,11 @@ input:checked+.slider:before {
     left: 0;
     width: 70%;
     height: 70%;
+    filter: drop-shadow(0 0 0.75rem var(--body-color)) drop-shadow(0 0 0.75rem var(--body-color));
+}
+
+body.dark__mode .home__title-svg {
     filter: drop-shadow(0 0 0.75rem var(--first-color)) drop-shadow(0 0 0.75rem var(--first-color-alt));
-    /* filter: drop-shadow(-.2rem 0 .5rem rgb(163, 0, 0)) drop-shadow(.5rem 0rem 0.75rem rgb(0, 81, 255)); */
 }
 
 .home__title-svg g {
@@ -549,7 +552,7 @@ input:checked+.slider:before {
 .home__img img {
     position: absolute;
     bottom: 0;
-    left: 50%;
+    left: 55%;
     width: 65vh;
     min-width: 65vh;
     /* width: 85vh; */
@@ -746,9 +749,6 @@ input:checked+.slider:before {
     }
 }
 
-
-
-
 /* =============== ABUUT =============== */
 .novel {
     height: 500px;
@@ -855,9 +855,7 @@ input:checked+.slider:before {
 @media screen and (max-width: 320px) {} */
 
 
-
-
-@media screen and (max-width: 992px) {
+@media (width <=992px) {
     html {
         /* 8.8px */
         font-size: 55%;
@@ -867,26 +865,16 @@ input:checked+.slider:before {
         border-radius: 5rem;
     }
 
-    /* .home__title-svg {
-        width: 80%;
-        height: 80%;
-    } */
-
     .home__img img {
-        left: 45%;
+        left: 30%;
     }
 }
 
-@media screen and (max-width: 768px) {
+@media (width <=768px) {
     :root {
-        /* --title-font-size: 11.5rem; */
+        --title-font-size: 11.5rem;
         --subtitle-font-size: 2.3rem;
     }
-
-    /* .nav {
-        padding: 0 2rem;
-        margin: 0 2rem;
-    } */
 
     .navbar::-webkit-scrollbar {
         display: none;
@@ -960,24 +948,11 @@ input:checked+.slider:before {
     .burger {
         display: inline-block;
     }
-
-    /* .home__container {
-        padding: 30vh 5rem;
-    }
-
-    .novel__container {
-        padding: 3.5rem 3rem;
-    } */
-
-    .home__img img {
-        width: 58vh;
-        min-width: 58vh;
-    }
 }
 
-@media screen and (max-width: 576px) {
+@media (width <=576px) {
     :root {
-        /* --title-font-size: 8rem; */
+        --title-font-size: 8rem;
         --subtitle-font-size: 1.75rem;
     }
 
@@ -999,14 +974,15 @@ input:checked+.slider:before {
         padding: 3.5rem 3rem;
     }
 
-    .home__img img {
-        left: 40%;
-    }
 
+    .home__img img {
+        width: 70vh;
+        min-width: 70vh;
+        left: 30%;
+    }
 }
 
-
-@media screen and (max-width: 460px) {
+@media (width <=460px) {
     :root {
         --title-font-size: 7rem;
     }
@@ -1017,17 +993,16 @@ input:checked+.slider:before {
         /* font-size: 1.4rem; */
     }
 
-    /* .home__title-svg {
-        width: 100%;
-        height: 100%;
-    } */
+    .home__title-svg {
+        width: 45rem;
+    }
 
     .home__img img {
         left: 10%;
     }
 }
 
-@media screen and (max-width: 390px) {
+@media (width <=390px) {
     :root {
         --title-font-size: 7rem;
     }
@@ -1043,30 +1018,62 @@ input:checked+.slider:before {
         font-size: 1.8rem;
     }
 
+
+    .home__title-svg {
+        width: 100%;
+    }
+
     .home__img img {
         left: -5%;
     }
 }
 
-
-@media screen and (max-width: 320px) {
+@media (width <=320px) {
     :root {
         --title-font-size: 6rem;
     }
+}
 
+
+/* =============== HOME IMAGE QUERY =============== */
+@media (width >=992px) {
     .home__img img {
-        left: -8%;
+        left: 30%;
     }
 }
 
-@media screen and (orientation: landscape) {
+@media (width <=576px) and (height <=1200px) {
     .home__img img {
+        left: 20%;
+    }
+}
+
+@media (height <=576px) and (orientation: landscape) {
+    .home__title-svg {
+        padding-left: 10%;
+        width: 60%;
+        min-width: 60%;
+    }
+}
+
+@media (height <=480px) and (orientation: landscape) {
+    .home__title-svg {
+        padding-left: 10%;
+        width: 50%;
+        min-width: 50%;
+    }
+}
+
+@media (width <=320px) and (height <=568px) {
+    .home__img img {
+        left: -6%;
+    }
+}
+
+@media (orientation: landscape) {
+    .home__img img {
+        width: 65vh;
+        min-width: 65vh;
         left: 55%;
     }
 }
-
-/* @media screen and (max-height: 576px) and (orientation: landscape) {
-    .home__img img {
-        display: none;
-    }
-} */
