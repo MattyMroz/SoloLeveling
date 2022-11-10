@@ -96,7 +96,6 @@
 }
 
 html {
-    height: -webkit-fill-available;
     /* 10px */
     font-size: 62.5%;
     /* Zapobieganie skalowaniu czcionek w orientacji poziomej przy jednoczesnym umożliwieniu powiększania przez użytkownika */
@@ -106,15 +105,13 @@ html {
 
 /* =============== BASE BODY =============== */
 body {
-    min-height: 100vh;
-    min-height: -webkit-fill-available;
     font-family: var(--normal-font);
     font-size: var(--normal-font-size);
     color: var(--text-color);
     background-color: var(--body-color);
     text-transform: capitalize;
     overflow-x: hidden;
-    position: relative;
+    /* position: relative; */
 }
 
 /* =============== DARK MODE =============== */
@@ -510,12 +507,12 @@ input:checked+.slider:before {
 
 /* =============== HOME =============== */
 .home {
-    height: 100vh;
+    /* height: 100vh; */
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
+    /* position: relative; */
     /* padding: 0 1rem; */
 }
 
@@ -719,29 +716,17 @@ body.dark__mode .home__title-svg {
 /* =============== SCROLL DOWN ELEMENT =============== */
 
 .home__scroll__down {
-    /* position: absolute;
+    position: absolute;
     left: .5rem;
     bottom: 2rem;
     font-size: var(--normal-font-size);
-    display: flex;
     writing-mode: vertical-rl;
     text-orientation: mixed;
     -webkit-writing-mode: vertical-rl;
     -webkit-text-orientation: mixed;
 
     z-index: var(--z-100);
-    animation: scrollDown 1s ease-in-out infinite; */
-
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    font-size: var(--normal-font-size);
-    display: flex;
-    writing-mode: vertical-rl;
-    text-orientation: mixed;
-    -webkit-writing-mode: vertical-rl;
-    -webkit-text-orientation: mixed;
-
+    animation: scrollDown 1s ease-in-out infinite;
 }
 
 .scroll__down-right {
