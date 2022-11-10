@@ -1036,7 +1036,7 @@ body.dark__mode .home__title-svg {
 
 
 /* =============== HOME IMAGE QUERY =============== */
-@media (width >=992px) {
+/* @media (width >=992px) {
     .home__img img {
         left: 30%;
     }
@@ -1076,4 +1076,4 @@ body.dark__mode .home__title-svg {
         min-width: 65vh;
         left: 55%;
     }
-}
+} */
