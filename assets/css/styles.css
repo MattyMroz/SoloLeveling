@@ -105,6 +105,8 @@ html {
 
 /* =============== BASE BODY =============== */
 body {
+    width: 100%;
+    height: calc(100vh - calc(100vh - 100%));
     font-family: var(--normal-font);
     font-size: var(--normal-font-size);
     color: var(--text-color);
@@ -112,6 +114,9 @@ body {
     text-transform: capitalize;
     overflow-x: hidden;
     position: relative;
+
+    /* Zapobieganie skalowaniu czcionek w orientacji poziomej przy jednoczesnym umożliwieniu powiększania przez użytkownika */
+    -webkit-text-size-adjust: 100%;
 }
 
 /* =============== DARK MODE =============== */
