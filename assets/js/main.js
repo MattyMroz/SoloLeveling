@@ -243,11 +243,22 @@ $(document).ready(function () {
         $toogleBtn.click(function () {
             $body.toggleClass('dark__mode');
             if ($body.hasClass('dark__mode')) {
+                // zniszcz local storage a potem dodaj
+                localStorage.removeItem('dark__mode');
                 localStorage.setItem('dark__mode', 'dark__mode');
             } else {
                 localStorage.removeItem('dark__mode');
             }
         });
+
+        // auto dark mode
+        // const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+
+        // if (prefersDarkScheme.matches) {
+        //     document.body.classList.add("dark__mode");
+        // } else {
+        //     document.body.classList.remove("dark__mode");
+        // }
     });
 
     // ========== RUBBER BAND ANIMATION ==========
