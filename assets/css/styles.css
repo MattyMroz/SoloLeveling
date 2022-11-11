@@ -1052,12 +1052,13 @@ input:checked+.slider:before {
     cursor: pointer; */
 
 
-    font-size: var(--h1-font-size);
+    font-size: var(--h2-font-size);
     font-family: var(--title-font);
     /* text-transform: uppercase; */
     letter-spacing: 2px;
     padding: .5rem 2rem;
     background-color: var(--text-color);
+    /* background: linear-gradient(90deg, var(--first-color), var(--first-color-alt)); */
     color: var(--body-color);
     border-radius: 50px;
     border: 0px;
@@ -1068,6 +1069,7 @@ input:checked+.slider:before {
 .button:hover {
     background-color: var(--body-color);
     color: var(--text-color);
+    transform: scale(1.1);
 }
 
 .button-bg {
