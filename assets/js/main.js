@@ -246,8 +246,12 @@ $(document).ready(function () {
                 // zniszcz local storage a potem dodaj
                 localStorage.removeItem('dark__mode');
                 localStorage.setItem('dark__mode', 'dark__mode');
+                localStorage.reload();
+                location.reload();
             } else {
                 localStorage.removeItem('dark__mode');
+                localStorage.reload();
+                location.reload();
             }
         });
 
