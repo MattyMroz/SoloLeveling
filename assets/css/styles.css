@@ -510,7 +510,7 @@ input:checked+.slider:before {
     left: 25%;
     width: 75%;
     height: 90vh;
-    background-image: url(/assets/img/Sung_Jin_Woo.png);
+    background-image: url(../img/Sung_Jin_Woo.png);
     background-size: auto 100%;
     background-position: bottom;
     background-repeat: no-repeat;
