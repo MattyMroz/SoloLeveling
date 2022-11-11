@@ -527,16 +527,13 @@ input:checked+.slider:before {
 
 .home__container {
     max-width: 1200px;
-    filter: drop-shadow(0 0 0.75rem var(--first-color-filter)) drop-shadow(0 0 0.75rem var(--first-color-alt-filter));
 }
 
 .home__data {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* align-items: center; */
-    /* margin: 0 auto; */
-    /* padding: 0 1rem; */
+    filter: drop-shadow(0 0 0.75rem var(--first-color-filter)) drop-shadow(0 0 0.75rem var(--first-color-alt-filter));
 
 }
 
