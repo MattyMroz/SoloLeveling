@@ -543,7 +543,7 @@ input:checked+.slider:before {
     left: 0;
     width: 70%;
     height: 70%;
-    filter: drop-shadow(0 0 0.75rem var(--body-color)) drop-shadow(0 0 0.75rem var(--body-color));
+    filter: drop-shadow(0 0 0.75rem var(--first-color)) drop-shadow(0 0 0.75rem var(--first-color-alt));
 }
 
 .dark__mode .home__title-svg {
@@ -850,11 +850,6 @@ input:checked+.slider:before {
 
 
 @media screen and (max-width: 992px) {
-
-    .dark__mode .home__title-svg {
-        filter: drop-shadow(0 0 0.75rem var(--first-color)) drop-shadow(0 0 0.75rem var(--first-color-alt));
-    }
-
     html {
         /* 8.8px */
         font-size: 55%;
@@ -870,10 +865,6 @@ input:checked+.slider:before {
 }
 
 @media screen and (max-width: 768px) {
-    .dark__mode .home__title-svg {
-        filter: drop-shadow(0 0 0.75rem var(--first-color)) drop-shadow(0 0 0.75rem var(--first-color-alt));
-    }
-
     :root {
         --title-font-size: 11.5rem;
         --subtitle-font-size: 2.3rem;
@@ -958,10 +949,6 @@ input:checked+.slider:before {
 }
 
 @media screen and (max-width: 576px) {
-    .dark__mode .home__title-svg {
-        filter: drop-shadow(0 0 0.75rem var(--first-color)) drop-shadow(0 0 0.75rem var(--first-color-alt));
-    }
-
     :root {
         --title-font-size: 8rem;
         --subtitle-font-size: 1.75rem;
@@ -994,10 +981,6 @@ input:checked+.slider:before {
 }
 
 @media screen and (max-width: 460px) {
-    .dark__mode .home__title-svg {
-        filter: drop-shadow(0 0 0.75rem var(--first-color)) drop-shadow(0 0 0.75rem var(--first-color-alt));
-    }
-
     :root {
         --title-font-size: 7rem;
     }
@@ -1010,10 +993,6 @@ input:checked+.slider:before {
 }
 
 @media screen and (max-width: 390px) {
-    .dark__mode .home__title-svg {
-        filter: drop-shadow(0 0 0.75rem var(--first-color)) drop-shadow(0 0 0.75rem var(--first-color-alt));
-    }
-
     :root {
         --title-font-size: 7rem;
     }
@@ -1031,10 +1010,6 @@ input:checked+.slider:before {
 }
 
 @media screen and (max-width: 320px) {
-    .dark__mode .home__title-svg {
-        filter: drop-shadow(0 0 0.75rem var(--first-color)) drop-shadow(0 0 0.75rem var(--first-color-alt));
-    }
-
     :root {
         --title-font-size: 6rem;
     }
@@ -1042,10 +1017,6 @@ input:checked+.slider:before {
 
 /* =============== DETALLES =============== */
 @media screen and (max-height: 576px) and (orientation: landscape) {
-    .dark__mode .home__title-svg {
-        filter: drop-shadow(0 0 0.75rem var(--first-color)) drop-shadow(0 0 0.75rem var(--first-color-alt));
-    }
-
     .home__img {
         left: 25%;
         width: 75%;
@@ -1059,10 +1030,6 @@ input:checked+.slider:before {
 }
 
 @media screen and (max-height: 480px) and (orientation: landscape) {
-    .dark__mode .home__title-svg {
-        filter: drop-shadow(0 0 0.75rem var(--first-color)) drop-shadow(0 0 0.75rem var(--first-color-alt));
-    }
-
     .home__title-svg {
         margin-left: 10%;
         width: 50%;
