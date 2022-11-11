@@ -496,7 +496,6 @@ input:checked+.slider:before {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* obramowanie cieniem gradientowym --first-color i -first-color-alt*/
     box-shadow: 0 4px 30px var(--shadow-color);
 }
 
@@ -547,7 +546,7 @@ input:checked+.slider:before {
     filter: drop-shadow(0 0 0.75rem var(--body-color)) drop-shadow(0 0 0.75rem var(--body-color));
 }
 
-body.dark__mode .home__title-svg {
+.dark__mode .home__title-svg {
     filter: drop-shadow(0 0 0.75rem var(--first-color)) drop-shadow(0 0 0.75rem var(--first-color-alt));
 }
 
@@ -965,10 +964,14 @@ body.dark__mode .home__title-svg {
         border-width: 1px;
     }
 
+    .home {
+        box-shadow: none !important;
+    }
+
     .home__img {
         left: 3%;
         width: 97%;
-        height: 85%;
+        height: 88%;
     }
 
     .novel__container {
