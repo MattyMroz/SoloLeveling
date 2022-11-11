@@ -495,7 +495,7 @@ input:checked+.slider:before {
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 0 4px 30px var(--shadow-color);
+    /* box-shadow: 0 4px 30px var(--shadow-color); */
 }
 
 #canvas {
@@ -1022,4 +1022,121 @@ input:checked+.slider:before {
         width: 50%;
         min-width: 50%;
     }
+}
+
+
+
+
+
+
+
+
+
+.button-wrapper {
+    position: relative;
+}
+
+
+.button {
+    /* display: block;
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 16px 32px;
+    background-color: var(--body-color);
+    color: var(--text-color);
+    border-radius: 50px;
+    border: 0px;
+    cursor: pointer; */
+
+
+    font-size: var(--h1-font-size);
+    font-family: var(--title-font);
+    /* text-transform: uppercase; */
+    letter-spacing: 2px;
+    padding: .5rem 2rem;
+    background-color: var(--text-color);
+    color: var(--body-color);
+    border-radius: 50px;
+    border: 0px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.button:hover {
+    background-color: var(--body-color);
+    color: var(--text-color);
+}
+
+.button-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    background: linear-gradient(90deg, var(--first-color) 0%, #ff0099 30.43%, var(--first-color-alt) 68.23%, #DB00FF 100%);
+    background-size: 600% 600%;
+    border-radius: 50px;
+    animation: AnimateBorder 4s ease infinite;
+    -webkit-animation: AnimateBorder 4s ease infinite;
+    -moz-animation: AnimateBorder 4s ease infinite;
+    z-index: -1;
+    transform: translate(-2px, -2px);
+    transition: filter 1s ease-in;
+}
+
+.button-wrapper:hover .button-bg {
+    filter: blur(10px);
+    transition: filter .2s ease-in;
+}
+
+
+@-webkit-keyframes AnimateBorder {
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+@-moz-keyframes AnimateBorder {
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+@keyframes AnimateBorder {
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+.lol {
+    display: flex;
+
+
 }
