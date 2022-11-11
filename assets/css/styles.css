@@ -241,6 +241,17 @@ textarea {
     cursor: pointer;
 }
 
+.text__filter {
+    filter: drop-shadow(0 0 0.75rem var(--body-color)) drop-shadow(0 0 0.75rem var(--body-color));
+}
+
+.text__gradient {
+    background: -webkit-linear-gradient(var(--first-color) 0%, var(--first-color-alt) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
 /*=============== REUSABLE CSS CLASSES ===============*/
 .container {
     max-width: var(--containter-width);
@@ -268,14 +279,8 @@ textarea {
 
 .section__title {
     font-size: var(--section-title-font-size);
-    /* background: -webkit-linear-gradient(var(--first-color) 0%, var(--first-color-alt) 100%); */
-    /* background-clip: text; */
-    /* -webkit-background-clip: text; */
-    /* -webkit-text-fill-color: transparent; */
     text-transform: none;
     margin-bottom: var(--section-vertical-spacing);
-
-    filter: drop-shadow(0 0 0.75rem var(--first-color-filter)) drop-shadow(0 0 0.75rem var(--first-color-alt-filter));
 }
 
 .section__subtitle {
@@ -327,12 +332,7 @@ textarea {
     /* wyświetl w jednej linii ważna */
     white-space: nowrap;
     text-transform: none !important;
-    filter: drop-shadow(0 0 0.75rem var(--first-color-filter)) drop-shadow(0 0 0.75rem var(--first-color-alt-filter));
 }
-
-/* .dark__mode .nav__logo a {
-    filter: drop-shadow(0 0 0.75rem var(--first-color)) drop-shadow(0 0 0.75rem var(--first-color-alt));
-} */
 
 .nav__list {
     display: flex;
@@ -396,9 +396,6 @@ textarea {
     margin: 0 1.25rem;
     width: 4rem;
     direction: rtl;
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
 }
 
 .switch {
@@ -543,7 +540,6 @@ input:checked+.slider:before {
     left: 0;
     width: 70%;
     height: 70%;
-    /* filter: drop-shadow(0 0 0.75rem var(--first-color-filter)) drop-shadow(0 0 0.75rem var(--first-color-alt-filter)); */
 }
 
 .home__title-svg g {
@@ -608,7 +604,7 @@ input:checked+.slider:before {
     /*  */
 }
 
-.button__cta,
+/* .button__cta,
 .button__ghost {
     background: transparent;
     display: inline-block;
@@ -664,15 +660,10 @@ input:checked+.slider:before {
 }
 
 .button__ghost::after {
-    /* border: double 2px transparent;
-    background-image: linear-gradient(var(--body-color), var(--body-color)), linear-gradient(var(--first-color), var(--first-color-alt));
-    background-origin: border-box;
-    background-clip: content-box, border-box; */
-
     border-style: solid;
     border-width: 2px;
     border-image: linear-gradient(var(--first-color), var(--first-color-alt)) 1;
-}
+} */
 
 @keyframes swipe {
     0% {
