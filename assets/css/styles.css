@@ -546,9 +546,9 @@ input:checked+.slider:before {
     filter: drop-shadow(0 0 0.75rem var(--body-color)) drop-shadow(0 0 0.75rem var(--body-color));
 }
 
-.dark__mode .home__title-svg {
+/* .dark__mode .home__title-svg {
     filter: drop-shadow(0 0 0.75rem var(--first-color)) drop-shadow(0 0 0.75rem var(--first-color-alt));
-}
+} */
 
 .home__title-svg g {
     fill: var(--text-color);
@@ -740,7 +740,7 @@ input:checked+.slider:before {
 
 /* =============== NOVEL =============== */
 .novel {
-    margin-top: 2rem;
+    margin-top: 3%;
     /* margin-top: 2rem; */
     z-index: var(--z-100);
     /* transition: 1s linear; */
