@@ -315,6 +315,7 @@ textarea {
 .nav__logo {
     width: 40rem;
     z-index: var(--z1000);
+
 }
 
 .nav__logo a {
@@ -324,6 +325,11 @@ textarea {
     /* wyświetl w jednej linii ważna */
     white-space: nowrap;
     text-transform: none !important;
+    filter: drop-shadow(0 0 0.75rem var(--body-color)) drop-shadow(0 0 0.75rem var(--body-color));
+}
+
+.dark__mode .nav__logo a {
+    filter: drop-shadow(0 0 0.75rem var(--first-color)) drop-shadow(0 0 0.75rem var(--first-color-alt));
 }
 
 .nav__list {
@@ -960,8 +966,9 @@ body.dark__mode .home__title-svg {
     }
 
     .home__img {
-        left: 0;
-        width: 100%;
+        left: 3%;
+        width: 97%;
+        height: 85%;
     }
 
     .novel__container {
