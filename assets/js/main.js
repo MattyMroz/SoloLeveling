@@ -243,13 +243,9 @@ $(document).ready(function () {
         $toogleBtn.click(function () {
             $body.toggleClass('dark__mode');
             if ($body.hasClass('dark__mode')) {
-                // zniszcz local storage a potem dodaj
-                localStorage.removeItem('dark__mode');
                 localStorage.setItem('dark__mode', 'dark__mode');
-                location.reload();
             } else {
                 localStorage.removeItem('dark__mode');
-                location.reload();
             }
         });
 
