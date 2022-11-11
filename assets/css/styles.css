@@ -98,12 +98,10 @@
 html {
     /* 10px */
     font-size: 62.5%;
-    /* Zapobieganie skalowaniu czcionek w orientacji poziomej przy jednoczesnym umożliwieniu powiększania przez użytkownika */
     -webkit-text-size-adjust: 100%;
-    /* overflow-x: hidden; */
 
     overflow-y: scroll;
-    /* overflow-x: hidden; */
+    overflow-x: hidden;
     -webkit-overflow-scrolling: touch;
 }
 
@@ -115,7 +113,6 @@ body {
     color: var(--text-color);
     background-color: var(--body-color);
     text-transform: capitalize;
-    /* overflow-x: hidden; */
 
     overflow-y: scroll;
     overflow-x: hidden;
@@ -556,19 +553,15 @@ body.dark__mode .home__title-svg {
 
 .home__img {
     position: absolute;
-    bottom: -1%;
+    /* right: calc(100% - 95vmax); */
     right: 0;
-    margin: 0;
-    padding: 0;
-    min-width: 0;
-    min-height: 0;
-
+    bottom: calc(100% - 104vh);
     z-index: var(--z-1);
 }
 
 .home__img img {
-    width: 65vh;
-    min-width: 65vh;
+    width: 90vh;
+    min-width: 90vh;
     /* object-fit: contain;
     position: absolute;
     bottom: 0;
@@ -577,6 +570,7 @@ body.dark__mode .home__title-svg {
     min-width: 65vh;
     z-index: var(--z-1); */
     filter: drop-shadow(-.2rem 0 .5rem rgb(163, 0, 0)) drop-shadow(.5rem 0rem 0.75rem rgb(0, 81, 255));
+    
 }
 
 .blast:hover {
@@ -767,8 +761,10 @@ body.dark__mode .home__title-svg {
     }
 }
 
-/* =============== ABUUT =============== */
+/* =============== NOVEL =============== */
 .novel {
+    z-index: var(--z-100);
+    /* transition: 1s linear; */
     height: 500px;
 }
 
@@ -872,6 +868,13 @@ body.dark__mode .home__title-svg {
 
 @media screen and (max-width: 320px) {} */
 
+@media screen and (min-width: 992px) {
+    .home__img {
+        right: calc(100% - 98vmax);
+    }
+}
+
+
 
 @media screen and (max-width:992px) {
     html {
@@ -883,9 +886,9 @@ body.dark__mode .home__title-svg {
         border-radius: 5rem;
     }
 
-    /* .home__img img {
-        left: 30%;
-    } */
+    .home__img {
+        right: calc(100% - 95vmax);
+    }
 }
 
 @media screen and (max-width:768px) {
@@ -1092,4 +1095,6 @@ body.dark__mode .home__title-svg {
         min-width: 65vh;
         left: 55%;
     } */
+
+    .home__img {}
 }
