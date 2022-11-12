@@ -1069,7 +1069,7 @@ input:checked+.slider:before {
 .button:hover {
     background-color: var(--body-color);
     color: var(--text-color);
-    transform: scale(1.1);
+    transform: scale(1.1) translateY(-.5rem);
 }
 
 .button-bg {
