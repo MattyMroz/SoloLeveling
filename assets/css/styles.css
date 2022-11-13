@@ -285,6 +285,12 @@ textarea {
     transition: filter .2s ease-in;
 }
 
+.button__wrapper:active .button__bg {
+    filter: blur(10px);
+    transition: filter .2s ease-in;
+}
+
+
 
 @-webkit-keyframes AnimateBorder {
     0% {
