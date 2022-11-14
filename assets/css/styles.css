@@ -705,6 +705,7 @@ input:checked+.slider:before {
 
 .section {
     font-size: var(--normal-font-size);
+    margin-bottom: 10rem;
 }
 
 
@@ -730,8 +731,7 @@ input:checked+.slider:before {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
-    padding: 0 3rem;
-
+    /* padding: 0 3rem; */
 }
 
 .data {

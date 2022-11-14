@@ -92,7 +92,7 @@ html {
     font-size: 62.5%;
     -webkit-text-size-adjust: 100%;
 
-    overflow-y: scroll;
+
     overflow-x: hidden;
     -webkit-overflow-scrolling: touch;
 }
@@ -106,8 +106,7 @@ body {
     background-color: var(--body-color);
     text-transform: capitalize;
 
-    overflow-y: scroll;
-    overflow-x: hidden;
+    overflow: hidden;
     -webkit-overflow-scrolling: touch;
 }
 
@@ -552,14 +551,12 @@ input:checked+.slider:before {
 
 
 /* =============== MAIN =============== */
-.main {
-    /*  */
-}
+.main {}
 
 /* =============== HOME =============== */
 .home {
     height: 100vh;
-    min-height: 100vh;
+    max-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -704,17 +701,17 @@ input:checked+.slider:before {
 /*=============== REUSABLE CSS CLASSES ===============*/
 .grid {
     display: grid;
-    /* gap: 1rem; */
 }
 
 .section {
     font-size: var(--normal-font-size);
-    margin-bottom: 10rem;
 }
+
 
 .section__title {
     font-size: var(--section-title-font-size);
     text-transform: none;
+    margin: 2rem 0;
 }
 
 .section__subtitle {
@@ -722,23 +719,52 @@ input:checked+.slider:before {
     text-transform: none;
 }
 
-
 .container {
     width: 100%;
     max-width: var(--containter-width);
     margin: 0 auto;
-    height: 100%;
+    /* height: 100%; */
 }
 
-/* 2 kolumny data */
 .content {
-    display: grid;
+    /* display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
-    padding: 0 3rem;
+    padding: 0 3rem; */
+
 }
 
-.data {}
+.data {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    padding: 1rem;
+    border-radius: 1rem;
+    /* background-color: var(--first-color); */
+    /* box-shadow: 0 4px 30px var(--shadow-color); */
+}
+
+.data p {
+    text-align: center;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.img__wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img__wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 1rem;
+}
 
 
 
