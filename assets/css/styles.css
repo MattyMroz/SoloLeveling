@@ -59,7 +59,6 @@
 
     --containter-width: 120rem;
     --containter-padding: 1.5rem;
-    --section-vertical-spacing: 2rem;
 
     /* ========== MARGENES BOTTOM ==========
     --mb-0-25: 0.25rem;
@@ -93,21 +92,19 @@ html {
     font-size: 62.5%;
     -webkit-text-size-adjust: 100%;
 
-    overflow-y: scroll;
     overflow-x: hidden;
     -webkit-overflow-scrolling: touch;
 }
 
 /* =============== BASE BODY =============== */
 body {
-    /* position: relative; */
+    position: relative;
     font-family: var(--normal-font);
     font-size: var(--normal-font-size);
     color: var(--text-color);
     background-color: var(--body-color);
     text-transform: capitalize;
 
-    overflow-y: scroll;
     overflow-x: hidden;
     -webkit-overflow-scrolling: touch;
 }
@@ -241,11 +238,10 @@ textarea {
 .button {
     display: inline-block;
     font-size: var(--h2-font-size);
-    font-family: var(--normal-font);
+    font-family: var(--bold-font);
     /* text-transform: uppercase; */
-    font-weight: 600;
-    letter-spacing: 1px;
-    padding: .5rem 2rem;
+    letter-spacing: -1px;
+    padding: .4em 1.4em;
     background-color: var(--text-color);
     color: var(--body-color);
     border-radius: 50px;
@@ -269,7 +265,7 @@ textarea {
     left: 0;
     width: calc(100% + 4px);
     height: calc(100% + 4px);
-    background: linear-gradient(90deg, var(--first-color) 0%, #ff0099 30.43%, var(--first-color-alt) 68.23%, #DB00FF 100%);
+    background: linear-gradient(90deg, var(--first-color) 0%, #ff0099 30%, var(--first-color-alt) 68%, #DB00FF 100%);
     background-size: 600% 600%;
     border-radius: 50px;
     animation: AnimateBorder 4s ease infinite;
@@ -355,41 +351,6 @@ textarea {
         transform: scaleX(0);
 
     }
-}
-
-/*=============== REUSABLE CSS CLASSES ===============*/
-.container {
-    max-width: var(--containter-width);
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-}
-
-.grid {
-    display: grid;
-    /* gap: 1rem; */
-}
-
-.section {
-    /* width: 100%; */
-    /* margin-bottom: var(--section-vertical-spacing); */
-    transition: none !important;
-    font-size: var(--normal-font-size);
-}
-
-.section__title,
-.section__subtitle {
-    /* text-align: center; */
-}
-
-.section__title {
-    font-size: var(--section-title-font-size);
-    text-transform: none;
-    margin-bottom: var(--section-vertical-spacing);
-}
-
-.section__subtitle {
-    font-size: var(--section-subtitle-font-size);
 }
 
 /* =============== HEADER AND NAVBAR =============== */
@@ -627,9 +588,6 @@ input:checked+.slider:before {
     filter: drop-shadow(-.2rem 0 .5rem rgb(163, 0, 0)) drop-shadow(.5rem 0rem 0.75rem rgb(0, 81, 255));
 }
 
-.home__container {
-    max-width: 1200px;
-}
 
 .home__data {
     display: flex;
@@ -699,10 +657,10 @@ input:checked+.slider:before {
     }
 }
 
-.home__subtitle {
-    /* font-family: var(--bold-font);
-    font-size: var(--subtitle-font-size); */
-}
+/* .home__subtitle {
+    font-family: var(--bold-font);
+    font-size: var(--subtitle-font-size);
+} */
 
 /* =============== SCROLL DOWN ELEMENT =============== */
 
@@ -741,12 +699,70 @@ input:checked+.slider:before {
 
 /* =============== MAIN BORDER =============== */
 
+/*=============== REUSABLE CSS CLASSES ===============*/
+.grid {
+    display: grid;
+}
+
+.section {
+    font-size: var(--normal-font-size);
+    margin-bottom: 4rem;
+    position: relative;
+}
+
+.section__title {
+    font-size: var(--section-title-font-size);
+    text-transform: none;
+    margin: 2rem 0;
+}
+
+.section__subtitle {
+    font-size: var(--section-subtitle-font-size);
+    text-transform: none;
+}
+
+
+.container {
+    width: 100%;
+    max-width: var(--containter-width);
+    margin: 0 auto;
+    /* height: 100%; */
+}
+
+/* 2 kolumny data */
+.content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    padding: 0 10rem;
+
+}
+
+.data {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    padding: 1rem;
+    border-radius: 1rem;
+    /* background-color: var(--first-color); */
+    /* box-shadow: 0 4px 30px var(--shadow-color); */
+}
+
+.data p {
+    text-align: center;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+
+
+
+
 /* =============== NOVEL =============== */
-.novel {
+/* .novel {
     margin-top: 3%;
-    /* margin-top: 2rem; */
     z-index: var(--z-100);
-    /* transition: 1s linear; */
     height: 500px;
 }
 
@@ -770,7 +786,7 @@ input:checked+.slider:before {
 .novel__title {
     font-size: var(--h1-font-size);
     margin-bottom: 1.5rem;
-}
+} */
 
 
 /* =============== PORTFOLIO =============== */
@@ -914,16 +930,6 @@ input:checked+.slider:before {
         --subtitle-font-size: 1.75rem;
     }
 
-    .button__cta,
-    .button__ghost {
-        width: 20rem;
-    }
-
-    .button__ghost::after {
-        border-style: solid;
-        border-width: 1px;
-    }
-
     .home {
         box-shadow: none !important;
     }
@@ -933,39 +939,17 @@ input:checked+.slider:before {
         width: 97%;
         height: 88%;
     }
-
-    .novel__container {
-        padding: 3.5rem 3rem;
-    }
-
 }
 
 @media screen and (max-width: 460px) {
     :root {
         --title-font-size: 7rem;
     }
-
-    .button__cta,
-    .button__ghost {
-        width: 17rem;
-        /* font-size: 1.4rem; */
-    }
 }
 
 @media screen and (max-width: 390px) {
     :root {
         --title-font-size: 7rem;
-    }
-
-    .home__buttons {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .button__cta,
-    .button__ghost {
-        width: 20rem;
-        font-size: 1.8rem;
     }
 }
 
