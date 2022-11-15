@@ -727,7 +727,7 @@ input:checked+.slider:before {
 
 /* ostatni section nie ma marginu */
 .section:last-child {
-    margin-bottom: 0;
+    margin-bottom: 5rem;
 }
 
 .section__title {
@@ -787,7 +787,7 @@ input:checked+.slider:before {
 
 /* =============== FOOTER =============== */
 .footer {
-    margin-bottom: 3rem;
+    margin-bottom: 5rem;
 }
 
 .footer .content {
