@@ -811,8 +811,6 @@ input:checked+.slider:before {
 .footer .nav__link {
     padding: 0;
     margin: 0;
-    font-size: var(--normal-font-size);
-
 }
 
 .footer__bottom {
