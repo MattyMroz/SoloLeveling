@@ -29,6 +29,9 @@
     --first-color-filter: var(--body-color);
     --first-color-alt-filter: var(--body-color);
 
+    --link-color: hsl(248, 100%, 62%);
+    --selection-color: hsla(248, 100%, 62%, .75);
+
     --title-color: hsl(0, 0%, 11%);
     --text-color: hsl(0, 0%, 11%);
     --text-color-alt: hsl(0, 0%, 15%);
@@ -108,6 +111,11 @@ body {
 
     overflow: hidden;
     -webkit-overflow-scrolling: touch;
+    /* zaznacznie tekstu */
+}
+
+::selection {
+    background-color: var(--selection-color);
 }
 
 /* =============== DARK MODE =============== */
@@ -187,7 +195,7 @@ p.normal__text {
 
 a {
     text-decoration: none;
-    color: #563CFF;
+    color: var(--link-color);
 }
 
 .link {
@@ -202,7 +210,7 @@ a {
 }
 
 .link:active {
-    filter: drop-shadow(0 0 0.5rem #563CFF);
+    filter: drop-shadow(0 0 0.5rem var(--link-color));
 }
 
 ul {
@@ -442,8 +450,8 @@ textarea {
     right: 0;
     width: 0;
     height: 2px;
-    color: #563CFF;
-    background-color: #563CFF;
+    color: var(--link-color);
+    background-color: var(--link-color);
     transition: width 0.6s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
@@ -452,7 +460,7 @@ textarea {
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; */
-    color: #563CFF;
+    color: var(--link-color);
     transition: all 0.6s;
 }
 
@@ -797,7 +805,7 @@ input:checked+.slider:before {
 
 .footer .data h3 {
     font-size: var(--h2-font-size);
-    margin-bottom: 1rem;
+    margin-bottom: 3rem;
 }
 
 .footer .nav__list {
@@ -945,9 +953,9 @@ input:checked+.slider:before {
         grid-template-columns: 1fr;
     }
 
-    /* .data:first-child {
-        order: 2;
-    } */
+    .footer .data h3 {
+        font-size: var(--h1-font-size);
+    }
 }
 
 @media screen and (max-width: 576px) {
