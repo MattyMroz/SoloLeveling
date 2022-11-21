@@ -191,6 +191,7 @@ h6 {
 p.normal__text {
     font-size: var(--h3-font-size);
     line-height: 1.2;
+    letter-spacing: .1rem;
 }
 
 a {
@@ -764,7 +765,7 @@ input:checked+.slider:before {
 .data {
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
+    justify-content: center;
     align-items: center;
     padding: 1rem;
     border-radius: 1rem;
@@ -775,23 +776,29 @@ input:checked+.slider:before {
 .data p {
     text-align: center;
     line-height: 1.6;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
 }
 
 .img__wrapper {
-    width: 100%;
-    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    filter: drop-shadow(0 0 0.75rem var(--first-color-filter)) drop-shadow(0 0 0.75rem var(--first-color-alt-filter));
 }
 
 .img__wrapper img {
-    width: 100%;
-    height: 100%;
     object-fit: cover;
     border-radius: 1rem;
 }
+
+/* imh hover */
+.img__wrapper:hover {
+    transform: scale(1.05);
+    transition: all 0.2s;
+}
+
+
+
 
 /* =============== FOOTER =============== */
 .footer {
