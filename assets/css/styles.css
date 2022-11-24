@@ -1,9 +1,9 @@
 /* =============== FONTS =============== */
 @font-face {
-    font-family: 'Serenity-SerifRegular';
+    font-family: 'Alegreya-Regular';
     font-style: normal;
     font-weight: normal;
-    src: local('Serenity-SerifRegular'), url('../fonts/Alegreya-Regular.ttf') format('woff');
+    src: local('Alegreya-Regular'), url('../fonts/Alegreya-Regular.ttf') format('woff');
 }
 
 @font-face {
@@ -41,7 +41,7 @@
     --shadow-color: rgba(0, 0, 0, 0.1);
 
     /* ========== FONTS ========== */
-    --normal-font: 'Serenity-SerifRegular', sans-serif;
+    --normal-font: 'Alegreya-Regular', sans-serif;
     --bold-font: 'Serenity-SerifHeavy', sans-serif;
     --italic-font: 'Serenity-SerifItalic', sans-serif;
 
