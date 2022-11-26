@@ -475,4 +475,8 @@ textarea {
     .manhwa {
         width: 100%;
     }
+
+    .manhwa__list {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
