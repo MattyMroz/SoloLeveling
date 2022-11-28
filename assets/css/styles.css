@@ -561,10 +561,6 @@ input:checked+.slider:before {
     fill: var(--text-color-alt);
 }
 
-.burger:hover {
-    /* cursor: pointer; */
-}
-
 .no__scroll {
     overflow: hidden;
 }
