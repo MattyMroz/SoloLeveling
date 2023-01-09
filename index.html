@@ -36,70 +36,72 @@
 </head>
 
 <body>
-    <!-- =============== HEADER =============== -->
-    <header class="header">
-        <div class="nav container top-bottom">
-            <div class="nav__logo">
-                <a href="#home" class="navlink">
-                    <span class="blast">S</span><span class="blast">o</span><span class="blast">l</span><span
-                        class="blast">o</span>
-                    <span class="blast">L</span><span class="blast">e</span><span class="blast">v</span><span
-                        class="blast">e</span><span class="blast">l</span><span class="blast">i</span><span
-                        class="blast">n</span><span class="blast">g</span>
-                </a>
-            </div>
 
-            <nav class="navbar">
-                <ul class="nav__list">
-                    <li class="nav__item">
-                        <a href="#home" class="nav__link navlink">Home</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#novel" class="nav__link navlink">Novel</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#audiobook" class="nav__link navlink">Audiobook</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#webtoon" class="nav__link navlink">Webtoon</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#amv" class="nav__link navlink">AMV</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#anime" class="nav__link navlink">Anime</a>
-                    </li>
-                    <li class="btns__1">
-                        <label class="switch">
-                            <input type="checkbox" class="toggle__btn">
-                            <span class="slider"></span>
-                        </label>
-                    </li>
-                </ul>
-            </nav>
-
-            <div class="btns__2">
-                <label class="switch">
-                    <input type="checkbox" class="toggle__btn">
-                    <span class="slider"></span>
-                </label>
-            </div>
-            <!-- =============== HAMBURGER =============== -->
-            <button class="burger">
-                <svg id="burger-svg">
-                    <rect class="burger-svg__base" />
-                    <title>Menu</title>
-                    <g class="burger-svg__bars">
-                        <rect class="burger-svg__bar-1" rx="3" x="5" y="11" width="40" height="4" />
-                        <rect class="burger-svg__bar-2" rx="3" x="5" y="23" width="40" height="4" />
-                        <rect class="burger-svg__bar-3" rx="3" x="5" y="35" width="40" height="4" />
-                    </g>
-                </svg>
-            </button>
-        </div>
-    </header>
 
     <main class="main">
+        <!-- =============== HEADER =============== -->
+        <header class="header">
+            <div class="nav container top-bottom">
+                <div class="nav__logo">
+                    <a href="#home" class="navlink text__filter">
+                        <span class="blast">S</span><span class="blast">o</span><span class="blast">l</span><span
+                            class="blast">o</span>
+                        <span class="blast">L</span><span class="blast">e</span><span class="blast">v</span><span
+                            class="blast">e</span><span class="blast">l</span><span class="blast">i</span><span
+                            class="blast">n</span><span class="blast">g</span>
+                    </a>
+                </div>
+
+                <nav class="navbar">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="#home" class="nav__link navlink text__filter">Home</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#novel" class="nav__link navlink text__filter">Novel</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#audiobook" class="nav__link navlink text__filter">Audiobook</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#webtoon" class="nav__link navlink text__filter">Webtoon</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#amv" class="nav__link navlink text__filter">AMV</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#anime" class="nav__link navlink text__filter">Anime</a>
+                        </li>
+                        <li class="btns__1 text__filter">
+                            <label class="switch">
+                                <input type="checkbox" class="toggle__btn">
+                                <span class="slider"></span>
+                            </label>
+                        </li>
+                    </ul>
+                </nav>
+
+                <div class="btns__2 text__filter">
+                    <label class="switch">
+                        <input type="checkbox" class="toggle__btn">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+                <!-- =============== HAMBURGER =============== -->
+                <button class="burger text__filter">
+                    <svg id="burger-svg">
+                        <rect class="burger-svg__base" />
+                        <title>Menu</title>
+                        <g class="burger-svg__bars">
+                            <rect class="burger-svg__bar-1" rx="3" x="5" y="11" width="40" height="4" />
+                            <rect class="burger-svg__bar-2" rx="3" x="5" y="23" width="40" height="4" />
+                            <rect class="burger-svg__bar-3" rx="3" x="5" y="35" width="40" height="4" />
+                        </g>
+                    </svg>
+                </button>
+            </div>
+        </header>
+
         <!-- =============== HOME =============== -->
         <section class="home section" id="home">
             <canvas id="canvas"></canvas>
@@ -508,96 +510,96 @@
                 </div>
             </div>
         </section>
+        <!-- =============== FOOTER =============== -->
+        <footer class="footer section">
+            <div class="container grid">
+                <div class="content">
+                    <div data-aos="fade-up" class="data">
+                        <h3 class="text__filter">
+                            <span class="blast">N</span><span class="blast">A</span><span class="blast">W</span><span
+                                class="blast">I</span><span class="blast">G</span><span class="blast">A</span><span
+                                class="blast">C</span><span class="blast">J</span><span class="blast">A</span>
+                        </h3>
+                        <ul class="nav__list">
+                            <li class="nav__item">
+                                <a href="#home" class="nav__link navlink text__filter">Home</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="#novel" class="nav__link navlink text__filter">Novel</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="#audiobook" class="nav__link navlink text__filter">Audiobook</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="#webtoon" class="nav__link navlink text__filter">Webtoon</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="#amv" class="nav__link navlink text__filter">AMV</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="#anime" class="nav__link navlink text__filter">Anime</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div data-aos="fade-up" class="data">
+                        <h3 class="text__filter">
+                            <span class="blast">U</span><span class="blast">W</span><span class="blast">A</span><span
+                                class="blast">G</span><span class="blast">I</span>
+                        </h3>
+
+                        <p class="normal__text text__filter">
+                            Jest to strona od fana do fanów.
+                        </p>
+                        <p class="normal__text text__filter">
+                            Nie jestem autorem żadnych wymienionych tu treści. Wszystkie
+                            prawa do nich należą do ich prawnych właścicieli.
+                        </p>
+                        <p class="normal__text text__filter">
+                            Jednak na własne potrzeby przetłumaczyłem i usystematyzowałem niektóre z nich.
+                        </p>
+                        <p class="normal__text text__filter">
+                            Jeśli nie podoba ci się ta polityka lub nie zgadzasz się z nią, proszę nie korzystać z tej
+                            strony i wybrać legalne źródło.
+                        </p>
+                        <p class="normal__text text__filter">
+                            To co tu znajdziesz to tylko moje ulubione treści i nie mam zamiaru zarabiać na nich.
+                        </p>
+                    </div>
+                    <div data-aos="fade-up" class="data">
+                        <h3 class="text__filter">
+                            <span class="blast">I</span><span class="blast">N</span><span class="blast">N</span><span
+                                class="blast">E</span>
+                        </h3>
+
+                        <p class="normal__text text__filter">
+                            Kod źródłowy strony i szablon do modelu jest dostępny na
+                            <a href="https://github.com/MattyMroz/SoloLeveling" class="link" target="_blank">GitHub</a>.
+                        </p>
+                        <p class="normal__text text__filter">
+                            Znajdziesz tam również programy do tworzenia własnych treści multimedialnych.
+                        </p>
+                        <p class="normal__text text__filter">
+                            Są to między innymi narzędzia do: skalowania anime i obrazów do 8K, zwiększania ilości FPS,
+                            tworzenia audiobooków z syntezatorem głosowym, masowego pobierania i tłumaczenia (AI lub
+                            Tłumacz
+                            Google) treści
+                            tekstowych z internetu, tworzenia własnych treści multimedialnych, itp.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <div>
+                    <p class="text__filter">
+                        Mateusz Mróz &#10022 2023
+                    </p>
+                </div>
+            </div>
+        </footer>
     </main>
 
-    <!-- =============== FOOTER =============== -->
-    <footer class="footer section">
-        <div class="container grid">
-            <div class="content">
-                <div data-aos="fade-up" class="data">
-                    <h3>
-                        <span class="blast">N</span><span class="blast">A</span><span class="blast">W</span><span
-                            class="blast">I</span><span class="blast">G</span><span class="blast">A</span><span
-                            class="blast">C</span><span class="blast">J</span><span class="blast">A</span>
-                    </h3>
-                    <ul class="nav__list">
-                        <li class="nav__item">
-                            <a href="#home" class="nav__link navlink">Home</a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="#novel" class="nav__link navlink">Novel</a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="#audiobook" class="nav__link navlink">Audiobook</a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="#webtoon" class="nav__link navlink">Webtoon</a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="#amv" class="nav__link navlink">AMV</a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="#anime" class="nav__link navlink">Anime</a>
-                        </li>
-                    </ul>
-                </div>
-                <div data-aos="fade-up" class="data">
-                    <h3>
-                        <span class="blast">U</span><span class="blast">W</span><span class="blast">A</span><span
-                            class="blast">G</span><span class="blast">I</span>
-                    </h3>
 
-                    <p class="normal__text text__filter">
-                        Jest to strona od fana do fanów.
-                    </p>
-                    <p class="normal__text text__filter">
-                        Nie jestem autorem żadnych wymienionych tu treści. Wszystkie
-                        prawa do nich należą do ich prawnych właścicieli.
-                    </p>
-                    <p class="normal__text text__filter">
-                        Jednak na własne potrzeby przetłumaczyłem i usystematyzowałem niektóre z nich.
-                    </p>
-                    <p class="normal__text text__filter">
-                        Jeśli nie podoba ci się ta polityka lub nie zgadzasz się z nią, proszę nie korzystać z tej
-                        strony i wybrać legalne źródło.
-                    </p>
-                    <p class="normal__text text__filter">
-                        To co tu znajdziesz to tylko moje ulubione treści i nie mam zamiaru zarabiać na nich.
-                    </p>
-                </div>
-                <div data-aos="fade-up" class="data">
-                    <h3>
-                        <span class="blast">I</span><span class="blast">N</span><span class="blast">N</span><span
-                            class="blast">E</span>
-                    </h3>
-
-                    <p class="normal__text text__filter">
-                        Kod źródłowy strony i szablon do modelu jest dostępny na
-                        <a href="https://github.com/MattyMroz/SoloLeveling" class="link" target="_blank">GitHub</a>.
-                    </p>
-                    <p class="normal__text text__filter">
-                        Znajdziesz tam również programy do tworzenia własnych treści multimedialnych.
-                    </p>
-                    <p class="normal__text text__filter">
-                        Są to między innymi narzędzia do: skalowania anime i obrazów do 8K, zwiększania ilości FPS,
-                        tworzenia audiobooków z syntezatorem głosowym, masowego pobierania i tłumaczenia (AI lub Tłumacz
-                        Google) treści
-                        tekstowych z internetu, tworzenia własnych treści multimedialnych, itp.
-                    </p>
-
-                    <p class="normal__text text__filter">
-
-                    </p>
-                </div>
-
-            </div>
-        </div>
-        <div class="footer__bottom">
-            <div>
-                <p>Mateusz Mróz &#10022 2022</p>
-            </div>
-        </div>
-    </footer>
 
     <!-- =============== JQUERY =============== -->
     <script src="https://code.jquery.com/jquery-3.6.0.js"
