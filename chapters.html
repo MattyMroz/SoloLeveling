@@ -36,10 +36,28 @@
         <div class="nav__button">
             <div class="button__area">
                 <div class="button__wrapper">
+                    <a class="button prev__chapter" href="chapters.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                            <path fill="currentColor"
+                                d="m4.836 12l6.207 6.207l1.414-1.414L7.664 12l4.793-4.793l-1.414-1.414zm5.65 0l6.207 6.207l1.414-1.414L13.314 12l4.793-4.793l-1.414-1.414z" />
+                        </svg>
+                    </a>
+                    <div class="button__bg"></div>
+                </div>
+                <div class="button__wrapper">
                     <a class="button" href="chapterList.html">
                         <i class="ri-arrow-right-s-line"></i>
                         Rozdziały
                         <i class="ri-arrow-left-s-line"></i>
+                    </a>
+                    <div class="button__bg"></div>
+                </div>
+                <div class="button__wrapper">
+                    <a class="button next__chapter" href="chapters.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                            <path fill="currentColor"
+                                d="m19.164 12l-6.207-6.207l-1.414 1.414L16.336 12l-4.793 4.793l1.414 1.414zm-5.65 0L7.307 5.793L5.893 7.207L10.686 12l-4.793 4.793l1.414 1.414z" />
+                        </svg>
                     </a>
                     <div class="button__bg"></div>
                 </div>
@@ -59,10 +77,28 @@
         <div class="nav__button">
             <div class="button__area">
                 <div class="button__wrapper">
+                    <a class="button prev__chapter" href="chapters.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                            <path fill="currentColor"
+                                d="m4.836 12l6.207 6.207l1.414-1.414L7.664 12l4.793-4.793l-1.414-1.414zm5.65 0l6.207 6.207l1.414-1.414L13.314 12l4.793-4.793l-1.414-1.414z" />
+                        </svg>
+                    </a>
+                    <div class="button__bg"></div>
+                </div>
+                <div class="button__wrapper">
                     <a class="button" href="chapterList.html">
-                        <i class=" ri-arrow-right-s-line"></i>
+                        <i class="ri-arrow-right-s-line"></i>
                         Rozdziały
                         <i class="ri-arrow-left-s-line"></i>
+                    </a>
+                    <div class="button__bg"></div>
+                </div>
+                <div class="button__wrapper">
+                    <a class="button next__chapter" href="chapters.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                            <path fill="currentColor"
+                                d="m19.164 12l-6.207-6.207l-1.414 1.414L16.336 12l-4.793 4.793l1.414 1.414zm-5.65 0L7.307 5.793L5.893 7.207L10.686 12l-4.793 4.793l1.414 1.414z" />
+                        </svg>
                     </a>
                     <div class="button__bg"></div>
                 </div>
@@ -70,50 +106,99 @@
         </div>
     </footer>
 </body>
+
 <script>
-    function blast() {
-        const blast = document.querySelectorAll('.blast');
-        blast.forEach((blast) => {
+    const addBlastAnimation = () => {
+        document.querySelectorAll('.blast').forEach(blast => {
             blast.addEventListener('mouseenter', () => {
-                blast.classList.add('active__blast');
-                blast.addEventListener('animationend', () => {
-                    blast.classList.remove('active__blast');
-                });
+                if (!blast.classList.contains('button__disabled')) {
+                    blast.classList.add('active__blast');
+                }
+            });
+            blast.addEventListener('animationend', () => {
+                blast.classList.remove('active__blast');
             });
         });
-    }
+    };
 
-    function generateImages() {
-        let buttonNumber = localStorage.getItem('buttonNumber');
-        let images = document.querySelector('.manhwa');
-        let num__h1 = document.querySelector('.num__h1');
-        num__h1.innerHTML = `${buttonNumber}`;
+    const updateChapterNumberDisplay = () => {
+        const chapterNumber = getCurrentChapterNumber();
+        document.querySelector('.num__h1').innerHTML = chapterNumber;
+    };
 
-        let i = 1;
-        while (i <= 100) {
-            let img = document.createElement('img');
-            img.src = `https://huggingface.co/datasets/MattyMroz/SoloLeveling/resolve/main/R${buttonNumber}/${i}.png`;
-            img.alt = `Solo Leveling`;
-            images.appendChild(img);
-            i++;
+    const getCurrentChapterNumber = () => {
+        return parseInt(localStorage.getItem('buttonNumber'), 10) || 0;
+    };
+
+    const generateChapterImages = () => {
+        const chapterNumber = getCurrentChapterNumber();
+        const imagesContainer = document.querySelector('.manhwa');
+        imagesContainer.innerHTML = '';
+
+        for (let i = 1; i <= 100; i++) {
+            const img = document.createElement('img');
+            img.src = `https://huggingface.co/datasets/MattyMroz/SoloLeveling/resolve/main/R${chapterNumber}/${i}.png`;
+            img.alt = `Solo Leveling Chapter ${chapterNumber} Image ${i}`;
+            img.onerror = () => img.style.display = 'none';
+            img.onload = () => img.style.display = 'block';
+            imagesContainer.appendChild(img);
         }
-    }
+    };
 
-    function displayNone() {
-        let images = document.querySelectorAll('.manhwa img');
-        images.forEach((image) => {
-            image.addEventListener('load', () => {
-                image.style.display = 'block';
-            });
-            image.addEventListener('error', () => {
-                image.style.display = 'none';
+    const setupChapterNavigation = () => {
+        setupNavigationButton('.prev__chapter', decrementChapterNumber);
+        setupNavigationButton('.next__chapter', incrementChapterNumber);
+        updateNavigationButtonState();
+    };
+
+    const setupNavigationButton = (selector, action) => {
+        document.querySelectorAll(selector).forEach(button => {
+            button.addEventListener('click', () => {
+                action();
+                updateChapterNumberDisplay();
+                generateChapterImages();
+                scrollToTop();
+                updateNavigationButtonState();
             });
         });
-    }
+    };
 
-    blast();
-    generateImages();
-    displayNone();
+    const updateNavigationButtonState = () => {
+        const chapterNumber = getCurrentChapterNumber();
+        document.querySelectorAll('.prev__chapter').forEach(button => {
+            button.classList.toggle('button__disabled', chapterNumber <= 0);
+        });
+        document.querySelectorAll('.next__chapter').forEach(button => {
+            button.classList.toggle('button__disabled', chapterNumber >= 179);
+        });
+    };
+
+    const decrementChapterNumber = () => {
+        let chapterNumber = getCurrentChapterNumber();
+        if (chapterNumber > 0) {
+            localStorage.setItem('buttonNumber', --chapterNumber);
+        }
+    };
+
+    const incrementChapterNumber = () => {
+        let chapterNumber = getCurrentChapterNumber();
+        if (chapterNumber < 179) {
+            localStorage.setItem('buttonNumber', ++chapterNumber);
+        }
+    };
+
+    const scrollToTop = () => {
+        window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+    };
+
+    const initializePage = () => {
+        addBlastAnimation();
+        updateChapterNumberDisplay();
+        generateChapterImages();
+        setupChapterNavigation();
+    };
+
+    initializePage();
 </script>
 
 </html>

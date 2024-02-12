@@ -228,10 +228,10 @@ textarea {
 .button__area {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     position: relative;
-    cursor: pointer;
     z-index: var(--z1);
+    gap: 20px;
 }
 
 .button__wrapper {
@@ -252,6 +252,12 @@ textarea {
     border: none;
     transition: .1s;
     z-index: var(--z1);
+}
+
+.button__disabled {
+    pointer-events: none;
+    opacity: 0.5;
+    cursor: none;
 }
 
 .button:hover {
@@ -290,6 +296,8 @@ textarea {
     filter: blur(10px);
     transition: filter .2s ease-in;
 }
+
+
 
 @-webkit-keyframes AnimateBorder {
     0% {

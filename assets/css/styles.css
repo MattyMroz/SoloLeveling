@@ -274,6 +274,13 @@ textarea {
     transition: .1s;
 }
 
+.button__disabled {
+    pointer-events: none;
+    opacity: 0.5;
+    cursor: none;
+}
+
+
 .button:hover {
     background-color: var(--body-color);
     color: var(--text-color);
