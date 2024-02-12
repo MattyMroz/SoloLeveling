@@ -149,7 +149,7 @@ h6 {
 
 p.normal__text {
     font-size: var(--h3-font-size);
-    line-height: 1.2;
+    line-height: 1.5;
     letter-spacing: .1rem;
 }
 
@@ -455,9 +455,17 @@ textarea {
 
 .footer {
     width: 100%;
-    height: 10rem;
+    height: auto;
+    padding-bottom: 5rem;
 }
 
+.announcements {
+    text-align: center;
+}
+
+.announcements a {
+    text-decoration: underline;
+}
 
 .manhwa__list {
     display: grid;
